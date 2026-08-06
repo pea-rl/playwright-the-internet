@@ -1,5 +1,3 @@
-import { JavaScriptAlertsPage } from "../pages/JavaScriptAlertsPage";
-
 import { test, expect } from "../fixtures/baseFixture";
 
 test.describe("Javascript Alerts", () => {
