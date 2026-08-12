@@ -3,12 +3,16 @@ import { CheckboxesPage } from "../pages/CheckboxesPage";
 import { DropdownPage } from "../pages/DropdownPage";
 import { JavaScriptAlertsPage } from "../pages/JavaScriptAlertsPage";
 import { DynamicControlsPage } from "../pages/DynamicControlsPage";
+import { LoginPage } from "../pages/LoginPage";
+import { SecurePage } from "../pages/SecurePage";
 
 export const test = base.extend<{ 
   checkboxesPage: CheckboxesPage;
   dropdownPage: DropdownPage;
   javaScriptAlertsPage: JavaScriptAlertsPage;
   dynamicControlsPage: DynamicControlsPage; 
+  loginPage: LoginPage;
+  securePage: SecurePage;
 
 }>({
   checkboxesPage: async ({ page }, use) => {
@@ -26,6 +30,14 @@ export const test = base.extend<{
   dynamicControlsPage: async ({ page }, use) => {
     const dynamicControlsPage = new DynamicControlsPage(page);
     await use(dynamicControlsPage);
+  },
+  loginPage: async ({ page }, use) => {
+    const loginPage = new LoginPage(page);
+    await use(loginPage);
+  },
+  securePage: async ({ page }, use) => {
+    const securePage = new SecurePage(page);
+    await use(securePage);
   },
 });
 
