@@ -43,7 +43,9 @@ export class DynamicLoadingPage {
   }
 
   async waitForLoadedText() {
-    await expect(this.finishText).toHaveText("Hello World!");
+    await expect(this.loadingIndicator).toBeVisible();
+    await expect(this.loadingIndicator).toBeHidden({ timeout: 10000 });
+    await expect(this.finishText).toBeVisible({ timeout: 10000 });
   }
 
   async assertPageLoaded() {

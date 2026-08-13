@@ -37,12 +37,17 @@ test.describe("Dynamic Loading", () => {
     await expect(dynamicLoadingPage.startButton).toBeVisible();
   });
   test("TC 4: Verify Example 1 dynamically loads element", async ({
-  dynamicLoadingPage,
-}) => {
-  await dynamicLoadingPage.openExample1();
-
-  await dynamicLoadingPage.clickStart();
-
-  await dynamicLoadingPage.waitForLoadedText();
-});
+    dynamicLoadingPage,
+  }) => {
+    await dynamicLoadingPage.openExample1();
+    await dynamicLoadingPage.clickStart();
+    await dynamicLoadingPage.waitForLoadedText();
+  });
+  test("TC 5: Verify Example 2 dynamically loads element", async ({
+    dynamicLoadingPage,
+  }) => {
+    await dynamicLoadingPage.openExample2();
+    await dynamicLoadingPage.clickStart();
+    await dynamicLoadingPage.waitForLoadedText();
+  });
 });
