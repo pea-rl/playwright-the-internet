@@ -7,6 +7,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { SecurePage } from "../pages/SecurePage";
 import { DynamicLoadingPage } from "../pages/DynamicLoadingPage";
 import { MultipleWindowsPage } from "../pages/MultipleWindowsPage";
+import { FramesPage } from "../pages/FramePage";
 
 export const test = base.extend<{ 
   checkboxesPage: CheckboxesPage;
@@ -17,6 +18,7 @@ export const test = base.extend<{
   securePage: SecurePage;
   dynamicLoadingPage: DynamicLoadingPage;
   multipleWindowsPage: MultipleWindowsPage;
+  framePage: FramesPage;
 
 }>({
   checkboxesPage: async ({ page }, use) => {
@@ -50,6 +52,10 @@ export const test = base.extend<{
   multipleWindowsPage: async ({ page }, use) => {
     const multipleWindowsPage = new MultipleWindowsPage(page);
     await use(multipleWindowsPage);
+  },
+  framePage: async ({ page }, use) => {
+    const framePage = new FramesPage(page);
+    await use(framePage);
   },
 });
 
