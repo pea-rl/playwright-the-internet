@@ -19,11 +19,9 @@ export class FramesPage {
       name: "iFrame",
     });
   }
-
   async goto() {
     await this.page.goto("/frames");
   }
-
   async assertPageLoaded() {
     await expect(this.page).toHaveURL(/frames/);
     await expect(this.heading).toBeVisible();

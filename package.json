@@ -18,6 +18,10 @@
   "homepage": "https://github.com/pea-rl/playwright-the-internet#readme",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.1.2"
+    "@types/node": "^26.4.1"
+  },
+  "dependencies": {
+    "present": "^1.0.0",
+    "scripts": "^0.1.0"
   }
 }
