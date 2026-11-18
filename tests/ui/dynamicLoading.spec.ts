@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/baseFixture";
+import { test, expect } from "../../fixtures/baseFixture";
 
 test.describe("Dynamic Loading", () => {
   test.beforeEach(async ({ dynamicLoadingPage }) => {

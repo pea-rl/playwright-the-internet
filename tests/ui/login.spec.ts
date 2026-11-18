@@ -1,5 +1,5 @@
-import { test, expect } from "../fixtures/baseFixture";
-import { loginData } from "../data/loginData";
+import { test, expect } from "../../fixtures/baseFixture";
+import { loginData } from "../../data/loginData";
 
 const invalidLoginScenarios = [
   {

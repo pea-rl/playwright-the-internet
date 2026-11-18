@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/baseFixture";
+import { test, expect } from "../../fixtures/baseFixture";
 
 test.describe("Multiple Windows", () => {
   test.beforeEach(async ({ multipleWindowsPage }) => {

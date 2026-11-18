@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/baseFixture";
+import { test, expect } from "../../fixtures/baseFixture";
 import fs from "fs";
 
 const TEST_FILE_PATH = "./data/sampleFile.txt"; //file path; data folder > sampleFile.txt

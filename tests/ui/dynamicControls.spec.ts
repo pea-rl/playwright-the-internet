@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/baseFixture";
+import { test, expect } from "../../fixtures/baseFixture";
 
 test.describe("Dynamic Controls", () => {
   test.beforeEach(async ({ dynamicControlsPage }) => {
