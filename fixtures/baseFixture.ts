@@ -9,6 +9,7 @@ import { DynamicLoadingPage } from "../pages/DynamicLoadingPage";
 import { MultipleWindowsPage } from "../pages/MultipleWindowsPage";
 import { FramesPage } from "../pages/FramePage";
 import { FileUploadPage } from "../pages/FileUploadPage";
+import { FileDownloadPage } from "../pages/FileDownloadPage";
 
 export const test = base.extend<{ 
   checkboxesPage: CheckboxesPage;
@@ -21,6 +22,7 @@ export const test = base.extend<{
   multipleWindowsPage: MultipleWindowsPage;
   framePage: FramesPage;
   fileUploadPage: FileUploadPage;
+  fileDownloadPage: FileDownloadPage;
 
 }>({
   checkboxesPage: async ({ page }, use) => {
@@ -62,6 +64,10 @@ export const test = base.extend<{
   fileUploadPage: async ({ page }, use) => {
     const fileUploadPage = new FileUploadPage(page);
     await use(fileUploadPage);
+  },
+  fileDownloadPage: async ({ page }, use) => {
+    const fileDownloadPage = new FileDownloadPage(page);
+    await use(fileDownloadPage);
   },
 });
 
